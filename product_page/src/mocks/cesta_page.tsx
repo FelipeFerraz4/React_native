@@ -11,6 +11,7 @@ const cesta_page = {
     description:
       'Um cesta com produtos selecionados cuidadosamente da fazenda, direto direto para sua cozinha.',
     price: 'R$ 40,00',
+    botao: 'Comprar',
   },
 };
 
