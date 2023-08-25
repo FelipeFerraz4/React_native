@@ -1,5 +1,6 @@
 import React from 'react';
-import {Text, View, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, Image, StyleSheet} from 'react-native';
+import ButtonCesta from './ButtonCesta';
 
 export default function Detalhes({
   nome,
@@ -18,9 +19,11 @@ export default function Detalhes({
       </View>
       <Text style={style_detalhes.descrition}>{description}</Text>
       <Text style={style_detalhes.price}>{price}</Text>
-      <TouchableOpacity style={style_detalhes.botao}>
-        <Text style={style_detalhes.botaoText}>{botao}</Text>
-      </TouchableOpacity>
+      <ButtonCesta
+        texto={botao}
+        style={style_detalhes.botao}
+        onPress={() => {}}
+      />
     </>
   );
 }
@@ -60,15 +63,5 @@ const style_detalhes = StyleSheet.create({
   },
   botao: {
     marginTop: 10,
-    backgroundColor: '#2A9F85',
-    paddingVertical: 16,
-    borderRadius: 6,
-  },
-  botaoText: {
-    textAlign: 'center',
-    color: '#ffffff',
-    fontSize: 16,
-    lineHeight: 26,
-    fontWeight: 'bold',
   },
 });
