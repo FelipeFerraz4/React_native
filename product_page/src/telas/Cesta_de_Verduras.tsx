@@ -10,7 +10,7 @@ import Brocolis from '../../assets/frutas/Brócolis.png';
 import Pepino from '../../assets/frutas/Pepino.png';
 
 export default function Cesta_de_verdura({
-  topo = {titulo: string},
+  topo,
   description,
 }): React.JSX.Element {
   return (
