@@ -34,7 +34,7 @@ const estilos = StyleSheet.create({
   compraMensagem: {
     fontSize: 16,
     lineHeight: 26,
-    color: '#464646',
+    color: '#454545',
   },
   imagem: {
     width: 70,
@@ -42,14 +42,14 @@ const estilos = StyleSheet.create({
   },
   boasVindas: {
     marginTop: 24,
-    fontSize: 26,
+    fontSize: 10,
     lineHeight: 42,
     fontWeight: 'bold',
     color: '#464646',
   },
   legenda: {
-    fontSize: 16,
+    fontSize: 20,
     lineHeight: 26,
-    color: '#A3A3A3',
+    color: '#000',
   },
 });
