@@ -42,14 +42,15 @@ const estilos = StyleSheet.create({
   },
   boasVindas: {
     marginTop: 24,
-    fontSize: 10,
+    fontSize: 30,
     lineHeight: 42,
     fontWeight: 'bold',
     color: '#464646',
   },
   legenda: {
+    marginTop: 5,
     fontSize: 20,
     lineHeight: 26,
-    color: '#000',
+    color: '#444',
   },
 });
