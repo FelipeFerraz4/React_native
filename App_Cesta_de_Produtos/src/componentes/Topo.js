@@ -3,30 +3,28 @@ import {Image, StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
 
 import Texto from './Texto';
 
-import Gradiente from '../assets/gradiente.svg';
+import Gradiente from '../assets/gradiente.png';
 import topo from '../assets/topo.png';
-import VoltarSVG from '../assets/voltar.svg';
+import VoltarSVG from '../assets/VoltarBranco.png';
 
 const largura = Dimensions.get('screen').width;
 const ALTURA_PADRAO = 270;
 
-export default function Topo({titulo, imagem = topo, altura = ALTURA_PADRAO}) {
+function Topo({titulo, imagem = topo, altura = ALTURA_PADRAO}) {
   const estilos = funcaoEstilos(altura);
   return (
     <>
       <Image source={imagem} style={estilos.topo} />
-      <Gradiente
-        width={largura}
-        height={(130 / 360) * largura}
-        style={estilos.gradiente}
-      />
+      <Image source={Gradiente} style={estilos.gradiente} />
       <Texto style={estilos.titulo}>{titulo}</Texto>
       <TouchableOpacity onPress={() => {}} style={estilos.botaoVoltar}>
-        <VoltarSVG color="white" style={estilos.voltar} />
+        <Image source={VoltarSVG} style={estilos.voltar} />
       </TouchableOpacity>
     </>
   );
 }
+
+export default Topo;
 
 const funcaoEstilos = altura =>
   StyleSheet.create({
@@ -35,6 +33,8 @@ const funcaoEstilos = altura =>
       height: altura,
     },
     gradiente: {
+      width: largura,
+      height: (130 / 360) * largura,
       position: 'absolute',
     },
     titulo: {
