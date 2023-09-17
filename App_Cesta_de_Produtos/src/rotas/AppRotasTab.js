@@ -10,7 +10,15 @@ const Tab = createBottomTabNavigator();
 function AppRotasTab() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+          tabBarActiveTintColor: '#2A9F85',
+          tabBarInactiveTintColor: '#C7C7C7',
+          tabBarLabelStyle: {
+            fontSize: 20,
+          },
+        }}>
         <Tab.Screen name="Home" component={AppRotasStack} />
         <Tab.Screen
           name="Melhores Produtores"

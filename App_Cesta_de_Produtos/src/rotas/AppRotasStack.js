@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 
 function AppRotasStack({ComponentePrincipal = Home}) {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="HomeStack" component={ComponentePrincipal} />
       <Stack.Screen name="ProdutorPage" component={ProdutorPage} />
     </Stack.Navigator>
