@@ -2,15 +2,16 @@ import React from 'react';
 import {useRoute} from '@react-navigation/native';
 import {StyleSheet, FlatList, View, Image, Text} from 'react-native';
 
+import useTextos from '../../hooks/useTextos';
 import Cesta from './componentes/Cesta';
 import Topo from '../../componentes/Topo';
-import useTextos from '../../hooks/useTextos';
+
 import topoImagem from '../../assets/produtores/topo.png';
 
 function TopoLista() {
   const {tituloProdutor, tituloCestas} = useTextos();
   const route = useRoute();
-  const {nome, imagem, cestas} = route.params;
+  const {nome, imagem} = route.params;
   return (
     <>
       <Topo titulo={tituloProdutor} imagem={topoImagem} altura={150} />
