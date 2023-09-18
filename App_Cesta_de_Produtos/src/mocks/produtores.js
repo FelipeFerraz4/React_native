@@ -31,7 +31,7 @@ const produtores = {
             nome: 'Brócolis e Pepino',
             descricao:
               'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
-            preco: 'R$ 40,00',
+            preco: 'R$ 50,00',
             imagem: pepino,
           },
           itens: [
