@@ -21,7 +21,6 @@ function App() {
         <TouchableOpacity
           style={stylePage.BotaoBusca}
           onPress={async () => {
-            console.log('Botão Funcionando');
             const {data} = await axios.get(
               'https://sci01-ter-jne.ufca.edu.br/cppgi/api/avaliacoes/2370/1/TODAS',
             );
