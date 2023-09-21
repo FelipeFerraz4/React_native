@@ -9,6 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import estilos from './estilos';
+import api from '../../servicos/api';
 
 export default function Principal({navigation}) {
   const [nomeUsuario, setNomeUsuario] = useState('');
