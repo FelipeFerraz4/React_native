@@ -15,6 +15,17 @@ export default function Principal({navigation}) {
   const [nomeUsuario, setNomeUsuario] = useState('');
   const [usuario, setUsuario] = useState({});
 
+  function Buscar() {
+    api
+      .get('/users/')
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
   return (
     <ScrollView>
       <View style={estilos.container}>
@@ -51,7 +62,7 @@ export default function Principal({navigation}) {
           style={estilos.entrada}
         />
 
-        <TouchableOpacity style={estilos.botao}>
+        <TouchableOpacity style={estilos.botao} onPress={() => Buscar()}>
           <Text style={estilos.textoBotao}>Buscar</Text>
         </TouchableOpacity>
       </View>
